@@ -1,0 +1,52 @@
+# Файл CLANG-FORMAT, созданный Visual Studio
+
+# Параметры стиля в этом файле являются наиболее безопасными для репликации
+# текущей конфигурации форматирования IDE из меню "Сервис" > "Параметры". Тем не менее 
+# необходимо проверить следующие параметры стиля:
+# AfterClass; AfterControlStatement; AfterEnum; AfterFunction; AfterNamespace; 
+# AfterStruct; AfterUnion
+
+BasedOnStyle: LLVM
+Standard: Cpp11
+AccessModifierOffset: -4
+AlignAfterOpenBracket: DontAlign
+AlignTrailingComments: true
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: true
+BraceWrapping:
+  AfterClass: false    # TODO: проверьте
+  AfterControlStatement: false    # TODO: проверьте
+  AfterEnum: false    # TODO: проверьте
+  AfterFunction: false    # TODO: проверьте
+  AfterNamespace: false    # TODO: проверьте
+  AfterStruct: false    # TODO: проверьте
+  AfterUnion: false    # TODO: проверьте
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+BreakBeforeBraces: Allman
+ColumnLimit: 0
+Cpp11BracedListStyle: false
+DerivePointerAlignment: true
+FixNamespaceComments: false
+IndentCaseLabels: false
+IndentPPDirectives: None
+IndentWidth: 6
+MaxEmptyLinesToKeep: 10
+NamespaceIndentation: All
+SortIncludes: false
+SortUsingDeclarations: false
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+TabWidth: 4
+UseTab: Never
+

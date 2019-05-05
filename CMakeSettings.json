@@ -1,0 +1,74 @@
+﻿{
+    "environments": [
+        {
+            "BUILD_ROOT": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+            "INSTALL_ROOT": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+            "STATIC_LINK_LIBS": "-DSTATIC_LINK_LIBS=\"YES\" -DVCPKG_TARGET_TRIPLET=x64-windows-static",
+            "TRAVIS_BUILD_NUMBER": "1",
+            "esp.extensions": "cppcorecheck.dll",
+            "esp.annotationbuildlevel": "ignore",
+
+            "______comment1______": "Для успешной сборки проекта в MSVC, необходимо прописать путь к vcpkg.cmake в переменной TOOLCHAIN",
+            "______comment2______": "Задание переменных caexcludepath, CNCC_PATH, PVS_Studio_PATH - опционально",
+
+            "TOOLCHAIN": "\"C:\\MyCode\\MyLib\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake\"",
+            "caexcludepath": "C:\\MyCode\\MyLib\\boost_1_69_0\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\VC\\;C:\\Program Files (x86)\\Windows Kits\\10\\Include\\;c:\\mycode\\mylib\\vcpkg\\installed\\",
+            "CNCC_PATH": "C:/PortableSoft/Tools Programer/clang-tools/cncc",
+            "PVS_Studio_PATH": "C:/Program Files (x86)/PVS-Studio"
+        }
+    ],
+    "configurations": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "inheritEnvironments": [
+                "msvc_x64_x64"
+            ],
+            "buildRoot": "${env.BUILD_ROOT}",
+            "installRoot": "${env.INSTALL_ROOT}",
+            "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=${env.TOOLCHAIN}",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": ""
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "RelWithDebInfo",
+            "inheritEnvironments": [
+                "msvc_x64_x64"
+            ],
+            "buildRoot": "${env.BUILD_ROOT}",
+            "installRoot": "${env.INSTALL_ROOT}",
+            "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=${env.TOOLCHAIN}",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": ""
+        },
+        {
+            "name": "x64-Debug static link",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "inheritEnvironments": [
+                "msvc_x64_x64"
+            ],
+            "buildRoot": "${env.BUILD_ROOT}",
+            "installRoot": "${env.INSTALL_ROOT}",
+            "cmakeCommandArgs": "${env.STATIC_LINK_LIBS} -DCMAKE_TOOLCHAIN_FILE=${env.TOOLCHAIN}",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": ""
+        },
+        {
+            "name": "x64-Release static link",
+            "generator": "Ninja",
+            "configurationType": "RelWithDebInfo",
+            "inheritEnvironments": [
+                "msvc_x64_x64"
+            ],
+            "buildRoot": "${env.BUILD_ROOT}",
+            "installRoot": "${env.INSTALL_ROOT}",
+            "cmakeCommandArgs": "${env.STATIC_LINK_LIBS} -DCMAKE_TOOLCHAIN_FILE=${env.TOOLCHAIN}",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": ""
+        }
+    ]
+}

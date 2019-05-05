@@ -1,0 +1,57 @@
+﻿dist: trusty
+sudo: false
+language: cpp
+
+# whitelist
+branches:
+  only:
+  - master
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-8
+      - doxygen
+
+before_script:
+- echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
+- sudo apt-get update -qq
+- sudo apt-get install graphviz
+#- sudo apt-get install libboost-all-dev -y
+
+- wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
+- tar xf release-1.8.0.tar.gz
+- cd googletest-release-1.8.0
+- CXX=/usr/bin/g++-8 CC=/usr/bin/gcc-8
+- cmake -DBUILD_SHARED_LIBS=OFF .
+- make
+- sudo cp -a googletest/include/gtest /usr/include
+- sudo cp -a googlemock/gtest/libgtest_main.a /usr/lib/
+- sudo cp -a googlemock/gtest/libgtest.a /usr/lib/
+- cd -
+
+script:
+- CXX=/usr/bin/g++-8 CC=/usr/bin/gcc-8
+- cmake -DSTATIC_LINK_LIBS=ON .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
+- /home/travis/build/rra-roro/homework_11_async/src_test/test_async
+- doxygen Doxyfile
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    on:
+      branch: master
+    script:
+      curl -T async-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -urra-roro:$BINTRAY_API_KEY "https://api.bintray.com/content/rra-roro/otus_homework/async/$TRAVIS_BUILD_NUMBER/async-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+
+  - provider: pages
+    skip_cleanup: true
+    local_dir: html
+    github_token: $GH_REPO_TOKEN
+    on:
+      branch: master
