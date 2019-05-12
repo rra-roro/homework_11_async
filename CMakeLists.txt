@@ -5,7 +5,8 @@ project(async VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 configure_file("./include/version.h.in" version.h)
 
 add_subdirectory(src_lib)
-# add_subdirectory(src)
+add_subdirectory(src_lib_shared)
+add_subdirectory(src)
 # add_subdirectory(src_test)
 
 

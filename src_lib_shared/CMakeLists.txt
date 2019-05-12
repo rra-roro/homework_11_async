@@ -10,9 +10,9 @@ if(STATIC_LINK_LIBS)
         endif ()
 endif ()
 
-SET(TARGT_NAME my_lib)
+SET(TARGT_NAME async)
 
-add_library(${TARGT_NAME} lib_version.cpp CLParser.cpp tchar_dummy.cpp)
+add_library(${TARGT_NAME} SHARED async.cpp)
 target_include_directories(${TARGT_NAME} PUBLIC "../include/" "${CMAKE_CURRENT_BINARY_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/.." )
 
 if (MSVC)
@@ -20,18 +20,17 @@ if (MSVC)
     message(STATUS "MSVC")
 
 	set_target_properties(${TARGT_NAME} PROPERTIES
-      CXX_STANDARD 17
-      CXX_STANDARD_REQUIRED ON
-      COMPILE_OPTIONS "/permissive-;/Zc:wchar_t"
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED ON
+        COMPILE_OPTIONS "/permissive-;/Zc:wchar_t;-Dshared_EXPORTS"
     )
 
 else()
 
 	set_target_properties(${TARGT_NAME} PROPERTIES
-		  CXX_STANDARD 17
-		  CXX_STANDARD_REQUIRED ON
-		  COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
+        CXX_STANDARD 17
+		CXX_STANDARD_REQUIRED ON
+		COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 	)
 
 endif ()
-
