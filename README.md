@@ -19,6 +19,7 @@
     Для безопасной обработки исключений возуждаемых connect(), receive() и disconnect() рекомедуетя такой код:
 ```cpp
 #include <iostream>
+#include <memory>
 
 #include "async.h"
 #include "exception_list.h"

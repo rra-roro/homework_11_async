@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <memory>
 
 #include "async.h"
 #include "exception_list.h"
