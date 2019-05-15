@@ -16,6 +16,7 @@ addons:
       - doxygen
 
 install:
+  - cmake --version
   - |
     CMAKE_URL="https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Linux-x86_64.tar.gz"      
     mkdir cmake && travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake
@@ -44,7 +45,7 @@ script:
 - CXX=/usr/bin/g++-8 CC=/usr/bin/gcc-8
 - cmake -DSTATIC_LINK_LIBS=ON .
 - cmake --build .
-- cmake --build . --target test
+#- cmake --build . --target test
 - cmake --build . --target package
 - /home/travis/build/rra-roro/homework_11_async/src_test/test_async
 - doxygen Doxyfile
