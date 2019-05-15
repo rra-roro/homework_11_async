@@ -36,5 +36,5 @@ set(CPACK_PACKAGE_CONTACT rra.roro@gmail.com)
 
 include(CPack)
 
-enable_testing()
-add_test(test_async src_test/test_async)
+#enable_testing()
+#add_test(test_async src_test/test_async)
