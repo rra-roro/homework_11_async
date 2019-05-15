@@ -26,6 +26,7 @@ install:
     export PATH=${DEPS_DIR}/cmake/bin:${PATH}
 
   - cmake --version
+  - cd -
 
 before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
