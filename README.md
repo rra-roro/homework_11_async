@@ -1,18 +1,17 @@
 # Otus homework 11: async
 
-## Использование libasync.so
+## Описание libasync.so
 Пакете async устанавливает следующие файлы:<br>
 /usr/lib/libasync.so  -  библиотека async<br>
 /usr/include/async.h  -  интерфейс библиотеки async<br>
 /usr/include/shared_EXPORTS.h - необходим для кроскомпиляции с библиотекой async<br>
 /usr/include/exception_list.h - вспомогательный файл для обработки исключений библиотеки async
 
-
 ## Описание особенностей моей реализации:
 
 1)  За основу взята многопоточная реализация из Задания 10
 
-2)   Проект собирает под Windows .dll и под Linux .so  файл библиотеки
+2)  Проект собирает под Windows .dll и под Linux .so  файл библиотеки
 
 2)  Вызовы  connect(), receive() и disconnect() могут осуществляться из разных потоков.
     При этом, между вызовами connect() и disconnect() можно вызывать receive() из разных потоков, с одним и тем же контекстом выполнения.
@@ -28,8 +27,8 @@
 #include <iostream>
 #include <memory>
 
-#include "async.h"
-#include "exception_list.h"
+#include <async.h>
+#include <exception_list.h>
 
 using namespace roro_lib;
 using namespace std;
@@ -68,6 +67,14 @@ int main(int, char*[])
       }
       return 0;
 }
+```
+
+## Использование libasync.so
+
+После установки пакета async он готов к использованию
+Для работы с библиотекой рекомендуется взять пример выше, и если сохранить его в файл main.cpp, то собрать его можно так:
+```cppp
+g++ main.cpp -lasync -lpthread
 ```
 
 Документацию и дополнительное описание проекта можно найти здесь:
