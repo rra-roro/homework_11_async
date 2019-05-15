@@ -35,6 +35,8 @@ else()
 
 endif ()
 
+set_target_properties(${TARGT_NAME} PROPERTIES PUBLIC_HEADER "async.h;shared_EXPORTS.h;exception_list.h")
+
 install(TARGETS ${TARGT_NAME}
         LIBRARY
           DESTINATION lib
