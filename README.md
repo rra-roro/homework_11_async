@@ -2,10 +2,10 @@
 
 ## Описание libasync.so
 Пакете async устанавливает следующие файлы:<br>
-<b>/usr/lib/libasync.so</b>  -  библиотека async<br>
-<b>/usr/include/async.h</b>  -  интерфейс библиотеки async<br>
-<b>/usr/include/shared_EXPORTS.h</b> - необходим для кроскомпиляции с библиотекой async<br>
-<b>/usr/include/exception_list.h</b> - вспомогательный файл для обработки исключений библиотеки async
+**/usr/lib/libasync.so**  -  библиотека async<br>
+**/usr/include/async.h**  -  интерфейс библиотеки async<br>
+**/usr/include/shared_EXPORTS.h** - необходим для кроскомпиляции с библиотекой async<br>
+**/usr/include/exception_list.h** - вспомогательный файл для обработки исключений библиотеки async
 
 ## Описание особенностей моей реализации:
 
