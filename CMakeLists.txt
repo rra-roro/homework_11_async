@@ -24,8 +24,7 @@ if (MSVC AND CNCC_PATH)
 
 endif()
 
-
-install(PROGRAMS src/async src_test/test_async DESTINATION bin)
+install(TARGETS)
 
 set(CPACK_GENERATOR DEB)
 

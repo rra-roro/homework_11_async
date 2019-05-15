@@ -34,3 +34,10 @@ else()
 	)
 
 endif ()
+
+install(TARGETS ${TARGT_NAME}
+        LIBRARY
+          DESTINATION lib
+        PUBLIC_HEADER
+          DESTINATION include
+       )
