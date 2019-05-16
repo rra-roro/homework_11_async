@@ -77,5 +77,12 @@ int main(int, char*[])
 g++ main.cpp -lasync -lpthread
 ```
 
+## Сборка libasync.so
+
+1) Для сборки под Linux см. .travis.yml
+
+2) Для сборки под Windows необходим  Cmake 3.14.4. Скачайте cmake-3.14.4-win32-x86.zip с https://cmake.org/download/ и замените им Cmake в каталоге<br>
+   **C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake**
+
 Документацию и дополнительное описание проекта можно найти здесь:
 https://rra-roro.github.io/homework_11_async
