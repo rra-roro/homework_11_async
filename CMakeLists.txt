@@ -7,7 +7,7 @@ configure_file("./include/version.h.in" version.h)
 add_subdirectory(src_lib)
 add_subdirectory(src_lib_shared)
 add_subdirectory(src)
-# add_subdirectory(src_test)
+add_subdirectory(src_test)
 
 
 set(CNCC_PATH $ENV{CNCC_PATH})
@@ -36,5 +36,5 @@ set(CPACK_PACKAGE_CONTACT rra.roro@gmail.com)
 
 include(CPack)
 
-#enable_testing()
-#add_test(test_async src_test/test_async)
+enable_testing()
+add_test(test_async src_test/test_async)
