@@ -40,8 +40,11 @@ namespace roro_lib
 
                               if (line == "{")
                               {
-                                    notify_subscribers(cmd_ris.command_list, cmd_ris.time_first_cmd);
-                                    cmd_ris.count_cmd_bulk = 0;
+                                    if (cmd_ris.count_bracket == 0)
+                                    {
+                                          notify_subscribers(cmd_ris.command_list, cmd_ris.time_first_cmd);
+                                          cmd_ris.count_cmd_bulk = 0;
+                                    }
                                     cmd_ris.count_bracket++;
                                     continue;
                               }
@@ -50,7 +53,7 @@ namespace roro_lib
                               {
                                     cmd_ris.count_bracket--;
                                     if (cmd_ris.count_bracket < 0)
-                                         throw std::runtime_error("found not a pair bracket");
+                                          throw std::runtime_error("found not a pair bracket");
 
                                     if (cmd_ris.count_bracket == 0)
                                     {
@@ -71,13 +74,11 @@ namespace roro_lib
                               }
                               cmd_ris.count_cmd_bulk++;
                         }
-
                   }
                   catch (...)
                   {
                         std::throw_with_nested(std::runtime_error("command_reader::read() failed."));
                   }
-
             };
 
             counters_command_reader get_counters() const noexcept
@@ -118,7 +119,5 @@ namespace roro_lib
                         std::throw_with_nested(std::runtime_error("command_reader::notify_subscribers() failed."));
                   }
             }
-
       };
-
 }
