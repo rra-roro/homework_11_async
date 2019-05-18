@@ -117,7 +117,7 @@ namespace roro_lib
 
                                     counters_thread.count_block++;
 
-                                    std::fstream fout(get_filename(std::get<2>(item), counters_thread.number_thread, gen), std::fstream::app);
+                                    std::fstream fout(get_filename(std::get<2>(item), counters_thread.number_thread, gen), std::fstream::out);
                                     for (auto cmd : std::get<1>(item))
                                     {
                                           fout << cmd << "\n";

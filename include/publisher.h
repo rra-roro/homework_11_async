@@ -23,7 +23,7 @@ namespace roro_lib
                   };
                   using fn_mem_t = void (Facke::*)(void);
 
-                  enum pointer_t
+                  enum pointer_types_e
                   {
                         data_pointer,
                         fun_pointer
@@ -31,7 +31,7 @@ namespace roro_lib
 
                   bool rvalue;
                   std::pair<std::variant<const void*, void (*)(void)>, fn_mem_t> key_value;
-                  pointer_t key_type;
+                  pointer_types_e key_type;
 
                   key_subscriber() = delete;
 
@@ -43,7 +43,7 @@ namespace roro_lib
                             typename FMx = void (Facke::*)(void),
                             typename std::enable_if_t<std::is_rvalue_reference_v<T&&>>* tmp = nullptr
                   >
-                  key_subscriber(T&& obj, FM fn) : rvalue(true), key_type(pointer_t::data_pointer)
+                  key_subscriber(T&& obj, FM fn) : rvalue(true), key_type(pointer_types_e::data_pointer)
                   {
                         key_value.first = &obj;
 
@@ -57,7 +57,7 @@ namespace roro_lib
                             typename FMx = void (Facke::*)(void),
                             typename std::enable_if_t<!std::is_rvalue_reference_v<T&&>>* tmp = nullptr
                   >
-                  key_subscriber(T&& obj, FM fn) : rvalue(false), key_type(pointer_t::data_pointer)
+                  key_subscriber(T&& obj, FM fn) : rvalue(false), key_type(pointer_types_e::data_pointer)
                   {
                         key_value.first = &obj;
 
@@ -74,7 +74,7 @@ namespace roro_lib
                             typename std::enable_if_t<std::is_pointer_v<F> &&
                                                       std::is_function_v<typename std::remove_pointer_t<F>>>* Facke = nullptr
                   >
-                  key_subscriber(F obj) : rvalue(false), key_type(pointer_t::fun_pointer)
+                  key_subscriber(F obj) : rvalue(false), key_type(pointer_types_e::fun_pointer)
                   {
                         key_value.first = reinterpret_cast<void (*)(void)>(obj); // allowed cast  C++17 [8.2.10/6]
                         key_value.second = nullptr;
@@ -83,7 +83,7 @@ namespace roro_lib
                   template <typename T,
                            typename std::enable_if_t<!std::is_pointer_v<T>>* Facke = nullptr
                   >
-                  key_subscriber(const T& obj) : rvalue(false), key_type(pointer_t::data_pointer)
+                  key_subscriber(const T& obj) : rvalue(false), key_type(pointer_types_e::data_pointer)
                   {
                         key_value.first = &obj;
                         key_value.second = nullptr;
@@ -141,7 +141,7 @@ namespace std
 
             result_t operator()(const argument_t& key_arg) const noexcept
             {
-                  using ptr_t = argument_t::pointer_t;
+                  using ptr_t = argument_t::pointer_types_e;
 
                   if (key_arg.key_type == ptr_t::data_pointer)
                         return std::hash<std::intptr_t>{}(intptr_cast(std::get<ptr_t::data_pointer>(key_arg.key_value.first)));
