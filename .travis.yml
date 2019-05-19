@@ -15,6 +15,17 @@ addons:
       - g++-8
       - doxygen
 
+install:
+  - DEPS_DIR="${HOME}/deps"
+  - mkdir -p ${DEPS_DIR} && cd ${DEPS_DIR}
+  - |
+    CMAKE_URL="https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Linux-x86_64.tar.gz"      
+    mkdir cmake && travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake
+    export PATH=${DEPS_DIR}/cmake/bin:${PATH}
+
+  - cmake --version
+  - cd -
+
 before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
@@ -38,7 +49,9 @@ script:
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- cd ./src_lib_shared
 - /home/travis/build/rra-roro/homework_11_async/src_test/test_async
+- cd -
 - doxygen Doxyfile
 
 deploy:
