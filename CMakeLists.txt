@@ -5,8 +5,9 @@ project(async VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 configure_file("./include/version.h.in" version.h)
 
 add_subdirectory(src_lib)
-# add_subdirectory(src)
-# add_subdirectory(src_test)
+add_subdirectory(src_lib_shared)
+add_subdirectory(src)
+add_subdirectory(src_test)
 
 
 set(CNCC_PATH $ENV{CNCC_PATH})
@@ -23,8 +24,7 @@ if (MSVC AND CNCC_PATH)
 
 endif()
 
-
-install(PROGRAMS src/async src_test/test_async DESTINATION bin)
+install(TARGETS)
 
 set(CPACK_GENERATOR DEB)
 
