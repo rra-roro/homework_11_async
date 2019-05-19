@@ -39,5 +39,5 @@ int main(int, char*[])
             cerr << "Error: unknown exception" << endl;
             return EXIT_FAILURE;
       }
-      return 0;
+      return EXIT_SUCCESS;
 }
