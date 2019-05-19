@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Структура roro_lib::save_log_file</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceroro__lib.html">roro_lib</a></li><li class="navelem"><a class="el" href="structroro__lib_1_1save__log__file.html">save_log_file</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="structroro__lib_1_1save__log__file-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура roro_lib::save_log_file</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="thread__fn_8h_source.html">thread_fn.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a7894dc14083058cc88cb50de81cec3fc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1save__log__file.html#a7894dc14083058cc88cb50de81cec3fc">rnd_gen_t</a> = std::mt19937</td></tr>
+<tr class="separator:a7894dc14083058cc88cb50de81cec3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a56b48e8e21d69781c9e088adc9d37a97"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1save__log__file.html#a56b48e8e21d69781c9e088adc9d37a97">get_filename</a> (std::time_t time_first_cmd, std::size_t number_thread, <a class="el" href="structroro__lib_1_1save__log__file.html#a7894dc14083058cc88cb50de81cec3fc">rnd_gen_t</a> &amp;gen)</td></tr>
+<tr class="separator:a56b48e8e21d69781c9e088adc9d37a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f94f0095de400a4c8aba69b334370e1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1save__log__file.html#a9f94f0095de400a4c8aba69b334370e1">get_tid</a> ()</td></tr>
+<tr class="separator:a9f94f0095de400a4c8aba69b334370e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb101b0ed8f5cae098051f4b0b684ee7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1save__log__file.html#acb101b0ed8f5cae098051f4b0b684ee7">save</a> (<a class="el" href="classroro__lib_1_1queue.html">queue</a>&lt; std::vector&lt; std::string &gt;, std::time_t &gt; &amp;que, <a class="el" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a> &amp;counters_thread, std::exception_ptr &amp;ex_ptr)</td></tr>
+<tr class="separator:acb101b0ed8f5cae098051f4b0b684ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Определения типов</h2>
+<a class="anchor" id="a7894dc14083058cc88cb50de81cec3fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structroro__lib_1_1save__log__file.html#a7894dc14083058cc88cb50de81cec3fc">roro_lib::save_log_file::rnd_gen_t</a> =  std::mt19937</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a56b48e8e21d69781c9e088adc9d37a97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string roro_lib::save_log_file::get_filename </td>
+          <td>(</td>
+          <td class="paramtype">std::time_t&#160;</td>
+          <td class="paramname"><em>time_first_cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>number_thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structroro__lib_1_1save__log__file.html#a7894dc14083058cc88cb50de81cec3fc">rnd_gen_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9f94f0095de400a4c8aba69b334370e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t roro_lib::save_log_file::get_tid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb101b0ed8f5cae098051f4b0b684ee7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void roro_lib::save_log_file::save </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classroro__lib_1_1queue.html">queue</a>&lt; std::vector&lt; std::string &gt;, std::time_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>que</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a> &amp;&#160;</td>
+          <td class="paramname"><em>counters_thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::exception_ptr &amp;&#160;</td>
+          <td class="paramname"><em>ex_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>include/<a class="el" href="thread__fn_8h_source.html">thread_fn.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

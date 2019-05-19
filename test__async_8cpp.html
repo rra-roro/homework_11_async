@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Файл src_test/test_async.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f11526b0e66d578304eec0a082b402c6.html">src_test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл test_async.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;gtest/gtest.h&quot;</code><br/>
+<code>#include &quot;gtest/gtest_prod.h&quot;</code><br/>
+<code>#include &lt;string_view&gt;</code><br/>
+<code>#include &lt;filesystem&gt;</code><br/>
+<code>#include &lt;memory&gt;</code><br/>
+<code>#include &quot;<a class="el" href="lib__version_8h_source.html">lib_version.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="publisher_8h_source.html">publisher.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="bulk__reader_8h_source.html">bulk_reader.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="queue_8h_source.html">queue.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="thread__fn_8h_source.html">thread_fn.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="thread__mgr_8h_source.html">thread_mgr.h</a>&quot;</code><br/>
+<code>#include &quot;async.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_async.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__async_8cpp__incl.png" border="0" usemap="#src__test_2test__async_8cpp" alt=""/></div>
+<map name="src__test_2test__async_8cpp" id="src__test_2test__async_8cpp">
+<area shape="rect" id="node7" href="lib__version_8h.html" title="lib_version.h" alt="" coords="587,80,681,107"/><area shape="rect" id="node8" href="publisher_8h.html" title="publisher.h" alt="" coords="445,155,531,181"/><area shape="rect" id="node19" href="bulk__reader_8h.html" title="bulk_reader.h" alt="" coords="881,80,980,107"/><area shape="rect" id="node25" href="queue_8h.html" title="queue.h" alt="" coords="1033,155,1100,181"/><area shape="rect" id="node29" href="thread__fn_8h.html" title="thread_fn.h" alt="" coords="1258,80,1344,107"/><area shape="rect" id="node35" href="thread__mgr_8h.html" title="thread_mgr.h" alt="" coords="757,80,856,107"/><area shape="rect" id="node9" href="include_2exception__list_8h.html" title="exception_list.h" alt="" coords="566,229,679,256"/><area shape="rect" id="node24" href="counters_8h.html" title="counters.h" alt="" coords="875,155,956,181"/><area shape="rect" id="node30" href="platform_8h.html" title="platform.h" alt="" coords="1765,155,1844,181"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1publisher.html">roro_lib::publisher</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__functor.html">roro_lib::subscriber_functor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1_publisher_mixin_test.html">roro_lib::PublisherMixinTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__base0.html">roro_lib::subscriber_base0</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__base1.html">roro_lib::subscriber_base1</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__base2.html">roro_lib::subscriber_base2</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__d.html">roro_lib::subscriber_d</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__md.html">roro_lib::subscriber_md</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1i__subscriber.html">roro_lib::i_subscriber</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__base.html">roro_lib::subscriber_base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__d2.html">roro_lib::subscriber_d2</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__state.html">roro_lib::subscriber_state</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__exeption.html">roro_lib::subscriber_exeption</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1subscriber__taged.html">roro_lib::subscriber_taged</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1publisher__not__void.html">roro_lib::publisher_not_void&lt; Base &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceroro__lib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html">roro_lib</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ac71eee326527fe37574dcf30816b6fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__async_8cpp.html#ac71eee326527fe37574dcf30816b6fff">PRIVATE_TEST</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ac71eee326527fe37574dcf30816b6fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:aaadc8fc06763c6f3e803b98d6a3db433"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__async_8cpp.html#aaadc8fc06763c6f3e803b98d6a3db433">TEST</a> (<a class="el" href="lib__version_8cpp.html#ae64f17a84dc9c7144d1036498ff26fd9">version</a>, test1)</td></tr>
+<tr class="separator:aaadc8fc06763c6f3e803b98d6a3db433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc33e99d612cb2ad3f68d0f00b73592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a4bc33e99d612cb2ad3f68d0f00b73592">roro_lib::subscriber_fn</a> ()</td></tr>
+<tr class="separator:a4bc33e99d612cb2ad3f68d0f00b73592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea2871a7bb8f36c764c589581039499"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a1ea2871a7bb8f36c764c589581039499">roro_lib::TEST_F</a> (PublisherMixinTest, UniqueAddSubscribers1)</td></tr>
+<tr class="separator:a1ea2871a7bb8f36c764c589581039499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa57b5e948b6c63cd42308abbd0dab2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#aaa57b5e948b6c63cd42308abbd0dab2b">roro_lib::TEST_F</a> (PublisherMixinTest, UniqueAddSubscribers2)</td></tr>
+<tr class="separator:aaa57b5e948b6c63cd42308abbd0dab2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c85b119fb32d91771e7e40603338062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a5c85b119fb32d91771e7e40603338062">roro_lib::TEST_F</a> (PublisherMixinTest, UniqueAddSubscribers3)</td></tr>
+<tr class="separator:a5c85b119fb32d91771e7e40603338062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3eccfbee45bae7e755ab9d23d872a85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#ac3eccfbee45bae7e755ab9d23d872a85">roro_lib::TEST_F</a> (PublisherMixinTest, StoreSubscribersByRef)</td></tr>
+<tr class="separator:ac3eccfbee45bae7e755ab9d23d872a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f806bdaa8ae5d8174f4be908630e1fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a8f806bdaa8ae5d8174f4be908630e1fd">roro_lib::TEST_F</a> (PublisherMixinTest, StoreSubscribersByValue)</td></tr>
+<tr class="separator:a8f806bdaa8ae5d8174f4be908630e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e7aaba81da014904f91e0d5680c903"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a54e7aaba81da014904f91e0d5680c903">roro_lib::TEST_F</a> (PublisherMixinTest, copy)</td></tr>
+<tr class="separator:a54e7aaba81da014904f91e0d5680c903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e21f323272f661abb26fbeba2ca1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#ad7e21f323272f661abb26fbeba2ca1bd">roro_lib::TEST_F</a> (PublisherMixinTest, move)</td></tr>
+<tr class="separator:ad7e21f323272f661abb26fbeba2ca1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479bcb5c44908d6824bcbab52d7282b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a479bcb5c44908d6824bcbab52d7282b7">roro_lib::TEST_F</a> (PublisherMixinTest, exeption)</td></tr>
+<tr class="separator:a479bcb5c44908d6824bcbab52d7282b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87003b3edd34f8c3404125a50866943"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#ae87003b3edd34f8c3404125a50866943">roro_lib::TEST_F</a> (PublisherMixinTest, DelSubscribers)</td></tr>
+<tr class="separator:ae87003b3edd34f8c3404125a50866943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a10e1e998932fff0ae2ed7d833f68f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#aa7a10e1e998932fff0ae2ed7d833f68f">roro_lib::fn1</a> (int a1, int a2)</td></tr>
+<tr class="separator:aa7a10e1e998932fff0ae2ed7d833f68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa464447419d3d565b056e2b403766632"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#aa464447419d3d565b056e2b403766632">roro_lib::fn2</a> (int a1, int a2)</td></tr>
+<tr class="separator:aa464447419d3d565b056e2b403766632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585c4a2d8b7de606d13496af520ef13c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a585c4a2d8b7de606d13496af520ef13c">roro_lib::fn3</a> (int a1, int a2)</td></tr>
+<tr class="separator:a585c4a2d8b7de606d13496af520ef13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad417168beef4eed9333bbe207ee5e079"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#ad417168beef4eed9333bbe207ee5e079">roro_lib::TEST_F</a> (PublisherMixinTest, NotifiRetValues)</td></tr>
+<tr class="separator:ad417168beef4eed9333bbe207ee5e079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4750d88f90140a87822c250d7b3f19a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#af4750d88f90140a87822c250d7b3f19a">roro_lib::TEST</a> (Command_Reader, ParserTest1)</td></tr>
+<tr class="separator:af4750d88f90140a87822c250d7b3f19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652841682d018f594a0fc031767c7491"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a652841682d018f594a0fc031767c7491">roro_lib::TEST</a> (Command_Reader, ParserTest2)</td></tr>
+<tr class="separator:a652841682d018f594a0fc031767c7491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87051f21a7e1d8de74350d6f577f0be2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#a87051f21a7e1d8de74350d6f577f0be2">roro_lib::TEST</a> (Command_Reader, ParserTest3)</td></tr>
+<tr class="separator:a87051f21a7e1d8de74350d6f577f0be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac0c983aabc9330f3e0b1db9b8ebddf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#adac0c983aabc9330f3e0b1db9b8ebddf">roro_lib::TEST</a> (Command_Reader, BulkFileSaveTest)</td></tr>
+<tr class="separator:adac0c983aabc9330f3e0b1db9b8ebddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3557c535be2de0757d81b9a99ba54c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceroro__lib.html#ae3557c535be2de0757d81b9a99ba54c8">roro_lib::TEST</a> (async_lib, test)</td></tr>
+<tr class="separator:ae3557c535be2de0757d81b9a99ba54c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a class="anchor" id="ac71eee326527fe37574dcf30816b6fff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PRIVATE_TEST&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a class="anchor" id="aaadc8fc06763c6f3e803b98d6a3db433"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lib__version_8cpp.html#ae64f17a84dc9c7144d1036498ff26fd9">version</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

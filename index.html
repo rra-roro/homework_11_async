@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Титульная страница</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">async Документация</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Описание libasync.so</h2>
+<p>Пакете async устанавливает следующие файлы:<br/>
+ <b>/usr/lib/libasync.so</b> - библиотека async<br/>
+ <b>/usr/include/async.h</b> - интерфейс библиотеки async<br/>
+ <b>/usr/include/shared_EXPORTS.h</b> - необходим для кроскомпиляции с библиотекой async<br/>
+ <b>/usr/include/exception_list.h</b> - вспомогательный файл для обработки исключений библиотеки async</p>
+<h2>Описание особенностей моей реализации:</h2>
+<p>1) За основу взята многопоточная реализация из Задания 10</p>
+<p>2) Проект собирает под Windows .dll и под Linux .so файл библиотеки</p>
+<p>2) Вызовы <a class="el" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">connect()</a>, <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> и <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> могут осуществляться из разных потоков. При этом, между вызовами <a class="el" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">connect()</a> и <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> можно вызывать <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> из разных потоков, с одним и тем же контекстом выполнения. Т.е. <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> потокобезопасен. Вызов <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> так же можно осуществить из любого потока, но пользователь билиотеки libasync.so должен гарантировать, что после вызова <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> ни один из потоков не вызовет <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a>.</p>
+<p>3) Вызовы <a class="el" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">connect()</a>, <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> и <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> могут бросать исключения. Если <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> бросает исклчение, пользователь должен гарантировать вызов <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a>, чтобы освободить ресурсы. Если <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> бросает исключение, то перед возбуждеием исключения, ресурсы гарантиовано освобождются.<br/>
+<br/>
+ Для безопасной обработки исключений возуждаемых <a class="el" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">connect()</a>, <a class="el" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">receive()</a> и <a class="el" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">disconnect()</a> рекомедуетя такой код: </p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;async.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;exception_list.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using namespace </span>roro_lib;</div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a81ce304348a420752ee080480d2b3095">main</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>*[])</div>
+<div class="line">{</div>
+<div class="line">      <span class="keywordflow">try</span></div>
+<div class="line">      {</div>
+<div class="line">            <span class="keyword">using</span> async_t = unique_ptr&lt;void, void (*)(async::handle_t)&gt;;</div>
+<div class="line"></div>
+<div class="line">            std::size_t bulk = 5;</div>
+<div class="line"></div>
+<div class="line">            async_t h2(<a class="code" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">async::connect</a>(bulk), <a class="code" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">async::disconnect</a>);</div>
+<div class="line">            async_t h(<a class="code" href="namespaceasync.html#a5fa15512a13bec73283bb7ad57d015bd">async::connect</a>(bulk), <a class="code" href="namespaceasync.html#ae52ddc0e11f1ddcd4092ee65d50775e1">async::disconnect</a>);</div>
+<div class="line"></div>
+<div class="line">            <a class="code" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">async::receive</a>(h.get(), <span class="stringliteral">&quot;1&quot;</span>, 1);</div>
+<div class="line">            <a class="code" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">async::receive</a>(h2.get(), <span class="stringliteral">&quot;1\n&quot;</span>, 2);</div>
+<div class="line">            <a class="code" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">async::receive</a>(h.get(), <span class="stringliteral">&quot;\n2\n3\n4\n5\n6\n{\na\n&quot;</span>, 15);</div>
+<div class="line">            <a class="code" href="namespaceasync.html#a00b0006adc1bfcb01ebdafa1793f475d">async::receive</a>(h.get(), <span class="stringliteral">&quot;b\nc\nd\n}\n89\n&quot;</span>, 11);</div>
+<div class="line"></div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="classroro__lib_1_1exception__ptr__list.html">exception_ptr_list</a>&amp; ex_list)</div>
+<div class="line">      {</div>
+<div class="line">            <a class="code" href="classroro__lib_1_1exception__ptr__list.html#a49a90c962186496db5000f8625c1c85e">exception_ptr_list::print</a>(ex_list);</div>
+<div class="line">            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">catch</span> (<span class="keyword">const</span> exception&amp; ex)</div>
+<div class="line">      {</div>
+<div class="line">            <a class="code" href="namespaceroro__lib.html#a82a8b5b6973bd04237811961a96cf051">print_nested_exception</a>(ex);</div>
+<div class="line">            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">catch</span> (...)</div>
+<div class="line">      {</div>
+<div class="line">            cerr &lt;&lt; <span class="stringliteral">&quot;Error: unknown exception&quot;</span> &lt;&lt; endl;</div>
+<div class="line">            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>Использование libasync.so</h2>
+<p>После установки пакета async он готов к использованию.<br/>
+ Для работы с библиотекой рекомендуется взять пример выше, и если сохранить его в файл <a class="el" href="main_8cpp.html">main.cpp</a>, то собрать его можно так: </p>
+<div class="fragment"><div class="line">g++ <a class="code" href="main_8cpp.html#a81ce304348a420752ee080480d2b3095">main</a>.cpp -lasync -lpthread</div>
+</div><!-- fragment --><h2>Сборка libasync.so</h2>
+<p>1) Для сборки под Linux см. .travis.yml</p>
+<p>2) Для сборки под Windows необходим Cmake 3.14.4. Скачайте cmake-3.14.4-win32-x86.zip с <a href="https://cmake.org/download/">https://cmake.org/download/</a> и замените им Cmake в каталоге<br/>
+ <b>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake</b> </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Шаблон класса roro_lib::publisher_mixin&lt; R(Args...)&gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceroro__lib.html">roro_lib</a></li><li class="navelem"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html">publisher_mixin< R(Args...)></a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Шаблон класса roro_lib::publisher_mixin&lt; R(Args...)&gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>mixin класс, реализующий функциональность паттерна Наблюдатель/Observer  
+ <a href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="publisher_8h_source.html">publisher.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a05d0b8f9a9f754253531bf775a0c0596"><td class="memTemplParams" colspan="2">template&lt;typename F , typename std::enable_if_t&lt; std::is_pointer_v&lt; F &gt; &amp;&amp;std::is_function_v&lt; typename std::remove_pointer_t&lt; F &gt;&gt;&gt; * Facke = nullptr&gt; </td></tr>
+<tr class="memitem:a05d0b8f9a9f754253531bf775a0c0596"><td class="memTemplItemLeft" align="right" valign="top">subscriber_handle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#a05d0b8f9a9f754253531bf775a0c0596">subscribe</a> (F fn)</td></tr>
+<tr class="separator:a05d0b8f9a9f754253531bf775a0c0596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f073639e1382277a26eb315204ee58"><td class="memTemplParams" colspan="2">template&lt;typename T , typename MF , typename std::enable_if_t&lt; std::is_member_function_pointer_v&lt; MF &gt;&gt; * Facke = nullptr&gt; </td></tr>
+<tr class="memitem:ab4f073639e1382277a26eb315204ee58"><td class="memTemplItemLeft" align="right" valign="top">subscriber_handle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#ab4f073639e1382277a26eb315204ee58">subscribe</a> (T &amp;&amp;obj, MF mfn)</td></tr>
+<tr class="separator:ab4f073639e1382277a26eb315204ee58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6980857eb67c925847cdcf7512358fe"><td class="memTemplParams" colspan="2">template&lt;typename Ref_ , typename T  = std::remove_reference_t&lt;Ref_&gt;, typename std::enable_if_t&lt;!std::is_function_v&lt; typename std::remove_pointer_t&lt; T &gt;&gt;&gt; * Facke = nullptr&gt; </td></tr>
+<tr class="memitem:ab6980857eb67c925847cdcf7512358fe"><td class="memTemplItemLeft" align="right" valign="top">subscriber_handle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#ab6980857eb67c925847cdcf7512358fe">subscribe</a> (Ref_ &amp;&amp;obj)</td></tr>
+<tr class="separator:ab6980857eb67c925847cdcf7512358fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d9ae83347a5a5314c93ab1a41ff54c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#af4d9ae83347a5a5314c93ab1a41ff54c">unsubscribe</a> (const subscriber_handle &amp;handle)</td></tr>
+<tr class="separator:af4d9ae83347a5a5314c93ab1a41ff54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88de8ab9dd0996aade389a27b7b2a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#ad88de8ab9dd0996aade389a27b7b2a52">unsubscribe_all</a> ()</td></tr>
+<tr class="separator:ad88de8ab9dd0996aade389a27b7b2a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a743c3d9761214bca53bad6a147eb8119"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#a743c3d9761214bca53bad6a147eb8119">notify</a> (Args...args)</td></tr>
+<tr class="separator:a743c3d9761214bca53bad6a147eb8119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0594917f4813a0c7e866caf449c722"><td class="memItemLeft" align="right" valign="top">std::function&lt; R(Args...)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#a5c0594917f4813a0c7e866caf449c722">get_fn_by_handle</a> (const subscriber_handle &amp;handle)</td></tr>
+<tr class="separator:a5c0594917f4813a0c7e866caf449c722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38240e4cd18510ebba208c0fc239a36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classroro__lib_1_1exception__ptr__list.html">exception_ptr_list</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#af38240e4cd18510ebba208c0fc239a36">get_last_notify_exception</a> () noexcept</td></tr>
+<tr class="separator:af38240e4cd18510ebba208c0fc239a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53a128c9e9d24d5a3a3008696274083"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classroro__lib_1_1publisher__mixin_3_01_r_07_args_8_8_8_08_4.html#af53a128c9e9d24d5a3a3008696274083">~publisher_mixin</a> ()</td></tr>
+<tr class="separator:af53a128c9e9d24d5a3a3008696274083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><h3>template&lt;typename R, typename... Args&gt;<br/>
+class roro_lib::publisher_mixin&lt; R(Args...)&gt;</h3>
+
+<p>mixin класс, реализующий функциональность паттерна Наблюдатель/Observer </p>
+<p>Мы можем добавить его, как базовый класс, в любой другой класс, что автоматически добавит в этот класс функциональность паттерна <code>наблюдатель</code> Класс *по умолчанию* сохраняет только уникальных подписчиков, т.е. все подписчики получат уведомления только один раз. Класс параметризуется общей сигнатурой ф-ии всех подписиков, т.е. все подписчики должны соответствовать этой сигнатуре.</p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>-тип взвращаемого значения ф-ии подписчика </td></tr>
+    <tr><td class="paramname">Args</td><td>-тип аргументов ф-ии подписчика </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="af53a128c9e9d24d5a3a3008696274083"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::~<a class="el" href="classroro__lib_1_1publisher__mixin.html">publisher_mixin</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a5c0594917f4813a0c7e866caf449c722"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;R(Args...)&gt; <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::get_fn_by_handle </td>
+          <td>(</td>
+          <td class="paramtype">const subscriber_handle &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af38240e4cd18510ebba208c0fc239a36"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classroro__lib_1_1exception__ptr__list.html">exception_ptr_list</a>&amp; <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::get_last_notify_exception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a743c3d9761214bca53bad6a147eb8119"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::notify </td>
+          <td>(</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05d0b8f9a9f754253531bf775a0c0596"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename std::enable_if_t&lt; std::is_pointer_v&lt; F &gt; &amp;&amp;std::is_function_v&lt; typename std::remove_pointer_t&lt; F &gt;&gt;&gt; * Facke = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subscriber_handle <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab4f073639e1382277a26eb315204ee58"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename MF , typename std::enable_if_t&lt; std::is_member_function_pointer_v&lt; MF &gt;&gt; * Facke = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subscriber_handle <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MF&#160;</td>
+          <td class="paramname"><em>mfn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab6980857eb67c925847cdcf7512358fe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename Ref_ , typename T  = std::remove_reference_t&lt;Ref_&gt;, typename std::enable_if_t&lt;!std::is_function_v&lt; typename std::remove_pointer_t&lt; T &gt;&gt;&gt; * Facke = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">subscriber_handle <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">Ref_ &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4d9ae83347a5a5314c93ab1a41ff54c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::unsubscribe </td>
+          <td>(</td>
+          <td class="paramtype">const subscriber_handle &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad88de8ab9dd0996aade389a27b7b2a52"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classroro__lib_1_1publisher__mixin.html">roro_lib::publisher_mixin</a>&lt; R(Args...)&gt;::unsubscribe_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="publisher_8h_source.html">publisher.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

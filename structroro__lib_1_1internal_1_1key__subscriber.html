@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Структура roro_lib::internal::key_subscriber</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceroro__lib.html">roro_lib</a></li><li class="navelem"><a class="el" href="namespaceroro__lib_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structroro__lib_1_1internal_1_1key__subscriber-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура roro_lib::internal::key_subscriber</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Эта структура является ключом для unordered_map, где хранятся ф-ии подписчиков, принимающие уведомления.  
+ <a href="structroro__lib_1_1internal_1_1key__subscriber.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="publisher_8h_source.html">publisher.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ad8a327ceb6057b5ee339292742bd1cb4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4">pointer_types_e</a> { <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4a9b5895d0ea71d909a2767caa9ba20437">data_pointer</a>, 
+<a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4a696a8539e975dcd785962fef0168b5cc">fun_pointer</a>
+ }</td></tr>
+<tr class="separator:ad8a327ceb6057b5ee339292742bd1cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada95b1e4295b9e766ff5cec8931d00d9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ada95b1e4295b9e766ff5cec8931d00d9">Facke</a> = struct{}</td></tr>
+<tr class="separator:ada95b1e4295b9e766ff5cec8931d00d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02c58c3659b5b8bef1b8586626eb2c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ae02c58c3659b5b8bef1b8586626eb2c2">fn_mem_t</a> = void(Facke::*)(void)</td></tr>
+<tr class="separator:ae02c58c3659b5b8bef1b8586626eb2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:add77c1a13290d310dccb266cdb7b6a4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#add77c1a13290d310dccb266cdb7b6a4e">key_subscriber</a> ()=delete</td></tr>
+<tr class="separator:add77c1a13290d310dccb266cdb7b6a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ec74ed816ab197e87501ffeff4d435"><td class="memTemplParams" colspan="2">template&lt;typename T , typename FM , typename FMx  = void (Facke::*)(void), typename std::enable_if_t&lt; std::is_rvalue_reference_v&lt; T &amp;&amp; &gt;&gt; * tmp = nullptr&gt; </td></tr>
+<tr class="memitem:a61ec74ed816ab197e87501ffeff4d435"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a61ec74ed816ab197e87501ffeff4d435">key_subscriber</a> (T &amp;&amp;obj, FM fn)</td></tr>
+<tr class="separator:a61ec74ed816ab197e87501ffeff4d435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ec74ed816ab197e87501ffeff4d435"><td class="memTemplParams" colspan="2">template&lt;typename T , typename FM , typename FMx  = void (Facke::*)(void), typename std::enable_if_t&lt;!std::is_rvalue_reference_v&lt; T &amp;&amp; &gt;&gt; * tmp = nullptr&gt; </td></tr>
+<tr class="memitem:a61ec74ed816ab197e87501ffeff4d435"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a61ec74ed816ab197e87501ffeff4d435">key_subscriber</a> (T &amp;&amp;obj, FM fn)</td></tr>
+<tr class="separator:a61ec74ed816ab197e87501ffeff4d435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26838fb1d3e7412ab72b0101de8bd0f6"><td class="memTemplParams" colspan="2">template&lt;typename F , typename std::enable_if_t&lt; std::is_pointer_v&lt; F &gt; &amp;&amp;std::is_function_v&lt; typename std::remove_pointer_t&lt; F &gt;&gt;&gt; * Facke = nullptr&gt; </td></tr>
+<tr class="memitem:a26838fb1d3e7412ab72b0101de8bd0f6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a26838fb1d3e7412ab72b0101de8bd0f6">key_subscriber</a> (F obj)</td></tr>
+<tr class="separator:a26838fb1d3e7412ab72b0101de8bd0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2d99a7e5859560b9c7fe3f20e2d200"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if_t&lt;!std::is_pointer_v&lt; T &gt;&gt; * Facke = nullptr&gt; </td></tr>
+<tr class="memitem:a0f2d99a7e5859560b9c7fe3f20e2d200"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a0f2d99a7e5859560b9c7fe3f20e2d200">key_subscriber</a> (const T &amp;obj)</td></tr>
+<tr class="separator:a0f2d99a7e5859560b9c7fe3f20e2d200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a404647ec275fc95eae9b1d3b9bfe49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a4a404647ec275fc95eae9b1d3b9bfe49">key_subscriber</a> (const <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;key_arg) noexcept=default</td></tr>
+<tr class="separator:a4a404647ec275fc95eae9b1d3b9bfe49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa942e4b9764d579cf6063048bdd2b188"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#aa942e4b9764d579cf6063048bdd2b188">key_subscriber</a> (<a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&amp;key_arg) noexcept=default</td></tr>
+<tr class="separator:aa942e4b9764d579cf6063048bdd2b188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c0af6e487865d8e3d8464d37611858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a39c0af6e487865d8e3d8464d37611858">operator=</a> (const <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;key_arg) noexcept=default</td></tr>
+<tr class="separator:a39c0af6e487865d8e3d8464d37611858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a08311ea0eeb74b40cca72844db0e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a9a08311ea0eeb74b40cca72844db0e21">operator=</a> (<a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&amp;key_arg) noexcept=default</td></tr>
+<tr class="separator:a9a08311ea0eeb74b40cca72844db0e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125d24be7abd159fd9a9c35390451775"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a125d24be7abd159fd9a9c35390451775">~key_subscriber</a> ()=default</td></tr>
+<tr class="separator:a125d24be7abd159fd9a9c35390451775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a8e5db49bf8d3012d5d637337282c1c93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a8e5db49bf8d3012d5d637337282c1c93">rvalue</a></td></tr>
+<tr class="separator:a8e5db49bf8d3012d5d637337282c1c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa228295d03015f465c24f3f6ccb119ab"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::variant&lt; const <br class="typebreak"/>
+void *, void(*)(void)&gt;<br class="typebreak"/>
+, <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ae02c58c3659b5b8bef1b8586626eb2c2">fn_mem_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#aa228295d03015f465c24f3f6ccb119ab">key_value</a></td></tr>
+<tr class="separator:aa228295d03015f465c24f3f6ccb119ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce1ce972f10f92c329f2c9661366cc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4">pointer_types_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#a2ce1ce972f10f92c329f2c9661366cc3">key_type</a></td></tr>
+<tr class="separator:a2ce1ce972f10f92c329f2c9661366cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Эта структура является ключом для unordered_map, где хранятся ф-ии подписчиков, принимающие уведомления. </p>
+<p>На основании этого ключа можно однозначно идентифицировать исходную ф-ию подписчика. Используется для контроля за тем, чтобы не добавлять уже имеющиеся ф-ии в список подписчиков. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a class="anchor" id="ada95b1e4295b9e766ff5cec8931d00d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ada95b1e4295b9e766ff5cec8931d00d9">roro_lib::internal::key_subscriber::Facke</a> =  struct { }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae02c58c3659b5b8bef1b8586626eb2c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ae02c58c3659b5b8bef1b8586626eb2c2">roro_lib::internal::key_subscriber::fn_mem_t</a> =  void (Facke::*)(void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Перечисления</h2>
+<a class="anchor" id="ad8a327ceb6057b5ee339292742bd1cb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4">roro_lib::internal::key_subscriber::pointer_types_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ad8a327ceb6057b5ee339292742bd1cb4a9b5895d0ea71d909a2767caa9ba20437"></a>data_pointer</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ad8a327ceb6057b5ee339292742bd1cb4a696a8539e975dcd785962fef0168b5cc"></a>fun_pointer</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="add77c1a13290d310dccb266cdb7b6a4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a61ec74ed816ab197e87501ffeff4d435"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FM , typename FMx  = void (Facke::*)(void), typename std::enable_if_t&lt; std::is_rvalue_reference_v&lt; T &amp;&amp; &gt;&gt; * tmp = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FM&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a61ec74ed816ab197e87501ffeff4d435"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FM , typename FMx  = void (Facke::*)(void), typename std::enable_if_t&lt;!std::is_rvalue_reference_v&lt; T &amp;&amp; &gt;&gt; * tmp = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FM&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26838fb1d3e7412ab72b0101de8bd0f6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename std::enable_if_t&lt; std::is_pointer_v&lt; F &gt; &amp;&amp;std::is_function_v&lt; typename std::remove_pointer_t&lt; F &gt;&gt;&gt; * Facke = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0f2d99a7e5859560b9c7fe3f20e2d200"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename std::enable_if_t&lt;!std::is_pointer_v&lt; T &gt;&gt; * Facke = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a404647ec275fc95eae9b1d3b9bfe49"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&#160;</td>
+          <td class="paramname"><em>key_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa942e4b9764d579cf6063048bdd2b188"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::key_subscriber </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a125d24be7abd159fd9a9c35390451775"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">roro_lib::internal::key_subscriber::~key_subscriber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a39c0af6e487865d8e3d8464d37611858"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a>&amp; roro_lib::internal::key_subscriber::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&#160;</td>
+          <td class="paramname"><em>key_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a08311ea0eeb74b40cca72844db0e21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a>&amp; roro_lib::internal::key_subscriber::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html">key_subscriber</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>key_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a class="anchor" id="a2ce1ce972f10f92c329f2c9661366cc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ad8a327ceb6057b5ee339292742bd1cb4">pointer_types_e</a> roro_lib::internal::key_subscriber::key_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa228295d03015f465c24f3f6ccb119ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;std::variant&lt;const void*, void (*)(void)&gt;, <a class="el" href="structroro__lib_1_1internal_1_1key__subscriber.html#ae02c58c3659b5b8bef1b8586626eb2c2">fn_mem_t</a>&gt; roro_lib::internal::key_subscriber::key_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e5db49bf8d3012d5d637337282c1c93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool roro_lib::internal::key_subscriber::rvalue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>include/<a class="el" href="publisher_8h_source.html">publisher.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

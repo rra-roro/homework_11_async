@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>async: Исходный файл include/counters.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">async
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">counters.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="counters_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>roro_lib</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__thread__mgr.html">    7</a></span>&#160;      <span class="keyword">struct </span><a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">    9</a></span>&#160;            std::size_t <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">number_thread</a> = 0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__thread__mgr.html#a52931674fba10648a922278aeb941032">   10</a></span>&#160;            std::size_t <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a52931674fba10648a922278aeb941032">count_block</a> = 0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__thread__mgr.html#a60918fb8af4f9c882b53e48a8e15e20e">   11</a></span>&#160;            std::size_t <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a60918fb8af4f9c882b53e48a8e15e20e">count_all_cmds</a> = 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#af6b2518643e1e44e758969668fe15562">counters_thread_mgr</a>() noexcept = default;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__thread__mgr.html#a6da6cc8c36dcb490f7598a8815210d28">   14</a></span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>(std::<span class="keywordtype">size_t</span> <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">number_thread</a>) noexcept : <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">number_thread</a>(<a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">number_thread</a>){};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#af6b2518643e1e44e758969668fe15562">counters_thread_mgr</a>(<span class="keyword">const</span> <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp;) noexcept = default;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>(<a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp;&amp;) noexcept = default;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp; operator=(const <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp;) noexcept = default;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp; operator=(<a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp;&amp;) noexcept = default;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespaceroro__lib.html#a6dc71b8b367f2957f294ce50fb3d6f8d">   21</a></span>&#160;      std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const <a class="code" href="structroro__lib_1_1counters__thread__mgr.html">counters_thread_mgr</a>&amp; counters)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            out &lt;&lt; counters.<a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a52931674fba10648a922278aeb941032">count_block</a> &lt;&lt; <span class="stringliteral">&quot; bloks; &quot;</span> &lt;&lt; counters.count_all_cmds &lt;&lt; <span class="stringliteral">&quot; cmds&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__command__reader.html">   27</a></span>&#160;      <span class="keyword">struct </span><a class="code" href="structroro__lib_1_1counters__command__reader.html">counters_command_reader</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__command__reader.html#af0de8011f8383185c396b1ae3d43040c">   29</a></span>&#160;            std::size_t count_string = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__command__reader.html#aadd4f4436091c8806e4920710b51d6f0">   30</a></span>&#160;            std::size_t <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a52931674fba10648a922278aeb941032">count_block</a> = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structroro__lib_1_1counters__command__reader.html#a619f3bf8b49c32dd10f1a64356ece93a">   31</a></span>&#160;            std::size_t <a class="code" href="structroro__lib_1_1counters__thread__mgr.html#a60918fb8af4f9c882b53e48a8e15e20e">count_all_cmds</a> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespaceroro__lib.html#a46c884f111f38e3a61dde471093ad892">   34</a></span>&#160;      std::ostream&amp; <a class="code" href="namespaceroro__lib.html#a6dc71b8b367f2957f294ce50fb3d6f8d">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="structroro__lib_1_1counters__command__reader.html">counters_command_reader</a>&amp; counters)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            out &lt;&lt; counters.<a class="code" href="structroro__lib_1_1counters__command__reader.html#af0de8011f8383185c396b1ae3d43040c">count_string</a> &lt;&lt; <span class="stringliteral">&quot; strings; &quot;</span> &lt;&lt; counters.<a class="code" href="structroro__lib_1_1counters__command__reader.html#aadd4f4436091c8806e4920710b51d6f0">count_block</a> &lt;&lt; <span class="stringliteral">&quot; bloks; &quot;</span> &lt;&lt; counters.<a class="code" href="structroro__lib_1_1counters__command__reader.html#a619f3bf8b49c32dd10f1a64356ece93a">count_all_cmds</a> &lt;&lt; <span class="stringliteral">&quot; cmds&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="structroro__lib_1_1counters__thread__mgr_html_af6b2518643e1e44e758969668fe15562"><div class="ttname"><a href="structroro__lib_1_1counters__thread__mgr.html#af6b2518643e1e44e758969668fe15562">roro_lib::counters_thread_mgr::counters_thread_mgr</a></div><div class="ttdeci">counters_thread_mgr() noexcept=default</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__thread__mgr_html_a63e93f50fcd2b2b45e8a63110b90c018"><div class="ttname"><a href="structroro__lib_1_1counters__thread__mgr.html#a63e93f50fcd2b2b45e8a63110b90c018">roro_lib::counters_thread_mgr::number_thread</a></div><div class="ttdeci">std::size_t number_thread</div><div class="ttdef"><b>Definition:</b> counters.h:9</div></div>
+<div class="ttc" id="namespaceroro__lib_html_a6dc71b8b367f2957f294ce50fb3d6f8d"><div class="ttname"><a href="namespaceroro__lib.html#a6dc71b8b367f2957f294ce50fb3d6f8d">roro_lib::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const counters_thread_mgr &amp;counters)</div><div class="ttdef"><b>Definition:</b> counters.h:21</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__thread__mgr_html_a60918fb8af4f9c882b53e48a8e15e20e"><div class="ttname"><a href="structroro__lib_1_1counters__thread__mgr.html#a60918fb8af4f9c882b53e48a8e15e20e">roro_lib::counters_thread_mgr::count_all_cmds</a></div><div class="ttdeci">std::size_t count_all_cmds</div><div class="ttdef"><b>Definition:</b> counters.h:11</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__command__reader_html_af0de8011f8383185c396b1ae3d43040c"><div class="ttname"><a href="structroro__lib_1_1counters__command__reader.html#af0de8011f8383185c396b1ae3d43040c">roro_lib::counters_command_reader::count_string</a></div><div class="ttdeci">std::size_t count_string</div><div class="ttdef"><b>Definition:</b> counters.h:29</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__thread__mgr_html_a52931674fba10648a922278aeb941032"><div class="ttname"><a href="structroro__lib_1_1counters__thread__mgr.html#a52931674fba10648a922278aeb941032">roro_lib::counters_thread_mgr::count_block</a></div><div class="ttdeci">std::size_t count_block</div><div class="ttdef"><b>Definition:</b> counters.h:10</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__thread__mgr_html"><div class="ttname"><a href="structroro__lib_1_1counters__thread__mgr.html">roro_lib::counters_thread_mgr</a></div><div class="ttdef"><b>Definition:</b> counters.h:7</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__command__reader_html_aadd4f4436091c8806e4920710b51d6f0"><div class="ttname"><a href="structroro__lib_1_1counters__command__reader.html#aadd4f4436091c8806e4920710b51d6f0">roro_lib::counters_command_reader::count_block</a></div><div class="ttdeci">std::size_t count_block</div><div class="ttdef"><b>Definition:</b> counters.h:30</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__command__reader_html_a619f3bf8b49c32dd10f1a64356ece93a"><div class="ttname"><a href="structroro__lib_1_1counters__command__reader.html#a619f3bf8b49c32dd10f1a64356ece93a">roro_lib::counters_command_reader::count_all_cmds</a></div><div class="ttdeci">std::size_t count_all_cmds</div><div class="ttdef"><b>Definition:</b> counters.h:31</div></div>
+<div class="ttc" id="structroro__lib_1_1counters__command__reader_html"><div class="ttname"><a href="structroro__lib_1_1counters__command__reader.html">roro_lib::counters_command_reader</a></div><div class="ttdef"><b>Definition:</b> counters.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
